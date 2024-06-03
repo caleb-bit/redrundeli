@@ -1,0 +1,57 @@
+
+.img-container {
+    position: relative;
+    color: white;
+}
+
+#img-text {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -80%);
+    font-size: 2.5vw;
+    white-space: nowrap;
+}
+
+#img-subtext {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -90%);
+    font-size: 1.5vw;
+    white-space: nowrap;
+}
+
+#banner {
+    filter: brightness(40%)
+}
+
+#mid-div {
+    padding: 2em;
+}
+
+#button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+button {
+    background-color: white;
+    font-size: large;
+    width: fit-content;
+}
+
+
+#hours-table {
+    font-size: large;
+    width: 20em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+}
+
+iframe {
+    width: 70vw;
+    height: 70vh;
+}

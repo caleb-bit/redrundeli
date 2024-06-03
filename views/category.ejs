@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="/css/menu.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <script src="https://kit.fontawesome.com/d1b6c7d582.js" crossorigin="anonymous"></script>
+    <title><%=title%> | Red Run Deli</title>
+</head>
+
+<body>
+    <%- include('partials/navbar') %>
+    <h2>Menu - <%=title%></h2>
+    <!-- <p>Select a dish</p> -->
+    <div class="grid-container">
+        <% for (dish of dishes) {%>
+        <div class="form">
+            <!-- <button class="category-btn" onclick="openForm('<%=dish._id%>')" id="<%=dish._id%>"><strong><%=dish.name%></strong> <br>$<%=dish.price%> -->
+            <button class="category-btn" id="<%=dish._id%>"><strong><%=dish.name%></strong> <br>$<%=dish.price%>
+            </button>
+
+        </div>
+        <% } %>
+    </div>
+    <% for(dish of dishes) {%>
+    <div id="<%=dish._id%>popup" class="popup">
+        <div class="popup-content">
+            <h2><%=dish.name%></h2>
+        </div>
+    </div>
+    <%}%>
+    <script src="/js/category.js"></script>
+    <%- include('partials/footer') %>
