@@ -131,7 +131,7 @@ const allDishes = [[
     'Cole Slaw',
     'Onion Rings',
     'Mozarella Sticks (6 pcs)'
-]]
+]];
 const allPrices = [[
     3.49, 4.99, 4.99, 4.99, 5.59, 5.59, 5.59, 5.59, 8.99, 5.99, 5.99, 5.59, 1.99, 2.99, 3.29, 6.99, 3.59, 2.29
 ], [
@@ -162,12 +162,58 @@ const allPrices = [[
     8.99, 16.99, 7.99, 5.99
 ], [
     3.59, 4.59, 4.59, 2.99, 3.99, 6.99
-]]
+]];
+const allDescriptions = [
+    ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''],
+    ['', '', '', '', '', ''],
+    ['', '', ''],
+    ['', '', '', ''],
+    ['Marinated Grilled Rib-Eye Steak, Grilled Onions, Melted Provolone Cheese with Lettuce, Tomato, and Onion',
+        'Fresh Cut Corned Beef, Creamy Cole Slaw, and Russian Dressing on Rye',
+        'Tuna or Chicken Salad with Melted Swiss Cheese and Bacon on Wheat',
+        'Crunchy Chicken Tender, Crispy Bacon, Melted Swiss Cheese, and Rich Honey Mustard Dressing on a Kaiser Roll',
+        'Crunchy Chicken Tenders, Crispy Bacon, Lettuce, Tomato, and Buttery Ranch Dressing on a Kaiser Roll',
+        'Crunchy Chicken Tender (3 pcs) soaked in house-made HOT sauce served with celery and a choice of ranch or blue cheese dressing',
+        'Crunchy Chicken Tenders soaked in house-made HOT sauce with a choice of ranch or blue cheese dressing in 8" sub',
+        'Chicken Salad, Avocado, Lettuce on a toasted mutli grain',
+        'Tuna Salad, Avocado, Baby Spinach, Swiss Cheese, Tomato, in a toasted Multi Grain',
+        'Hot Roasted Beef, Swiss Cheese, Grilled Green Pepper and Onion in a toasted Ciabatta',
+        'Grilled Chicken with Swiss Cheese, Grilled Peppers and Onions in a toasted Ciabatta',
+        'Grilled Chicken Breast, Crispy Bacon, Melted Swiss Cheese, and Rich Blue Cheese dressing on a Kaiser Roll',
+        'Roasted Turkey, Alfafa Sprouts, Lettuce, Tomato, Honey Mustard in Croissant',
+        'Alfafa Sprouts, Havarti Cheese, Avocado, Cucumber, Lettuce, Tomato, and Oregano in whole wheat bread with mayo',
+        '', ''
+    ],
+    ['Served with French Fries and 16 oz Fountain Soda',
+        'Served with French Fries and 16 oz Fountain Soda',
+        'Served with French Fries and 16 oz Fountain Soda',
+        'Served with French Fries and 16 oz Fountain Soda',
+        'Served with French Fries and 16 oz Fountain Soda',
+        'Served with French Fries and 16 oz Fountain Soda',
+        'Served with French Fries and 16 oz Fountain Soda',
+        'Served with French Fries and 16 oz Fountain Soda',
+        '', '', 'Served with French Fries and 16 oz Fountain Soda', ''], [
+        '', '', '', '', '', '', '', '', '', '', ''],
+    [
+        '', '', '', ''
+    ], [
+        'Roasted Turkey, Bacon, Lettuce, Tomato, and Mayonnaise', 'Grilled Chicken Breast, Avocado, Grilled Green Pepper, Lettuce with Honey Mustard or Russian Dressing',
+        'Grilled Chicken Breast, Bacon, Chopped Romaine Lettuce, Parmesan Cheese, and Caesar Dressing',
+        'Roasted Turkey, Lots of Spinach, Caramelized Onions, Harvati Cheese, and Honey Mustard',
+        'Grilled Chicken Breast, Lettuce, Tomatoes, Honey Mustard, Swiss Cheese',
+        'Roasted Turkey, Lettuce, Cucumber, Honey Mustard, and Swiss Cheese',
+        'Avocado, Alfafa Sprouts, Spinach, Lettuce, Cucumber, Tomato, and Swiss Cheese in Spinach Wrap or Whole Wheat with Ranch Dressing',
+        'Jumbo Fried Shrimp, Lettuce, Tomato, and Mayonnaise'
+    ], [
+        '', 'Turkey, Ham, and cheddar cheese on our homemade garden salad', '', '', '', ''
+    ], [''], ['', '', '', '', '', '', '', ''], ['', ''], ['', '', '', ''], ['', '', '', '', '', '']
+];
+
 const seedCategories = [];
 for (let i = 0; i < categories.length; i++) {
     const dishes = [];
     for (let j = 0; j < allDishes[i].length; j++) {
-        dishes.push(new Dish({ name: allDishes[i][j], price: allPrices[i][j] }));
+        dishes.push(new Dish({ name: allDishes[i][j], price: allPrices[i][j], description: allDescriptions[i][j] }));
     }
     seedCategories.push({ name: categories[i], img: "img/" + categoryPics[i], dishes });
 }
