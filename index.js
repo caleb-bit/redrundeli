@@ -31,7 +31,7 @@ app.get('/menu', async (req,res) => {
 app.get('/menu/:catId', async (req,res) => {
     const {catId} = req.params;
     const category = await Category.findById(catId);
-    res.render('category', {category, title: category.name, dishes: category.dishes});
+    res.render('pickDish', {category, title: category.name, dishes: category.dishes});
 })
 
 app.get('/dish/:catId/:dishId', async (req,res) => {

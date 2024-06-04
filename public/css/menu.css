@@ -47,21 +47,30 @@
     margin:0;
     top:0;
     position: fixed;
-    z-index:100; 
+    z-index:2; 
     overflow: auto;
     background-color: rgba(0,0,0,0.4);
     justify-content: center;
-    
 }
 
 .popup-content {
     position: absolute;
     top: 50%;
     left: 50%;
+    z-index:3;
     transform: translate(-50%,-50%);
-    /* margin: auto; */
     width: 40vw;
     height: 60vh;
     background-color: white;
     color: black;
+    border: solid black;
+    border-width: 1px;
+    border-color:black;
+    padding: 1em;
+}
+
+#back-btn {
+    background-color: transparent;
+    border: 0;
+    color: white;
 }

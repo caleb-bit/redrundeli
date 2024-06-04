@@ -16,23 +16,27 @@
 <body>
     <%- include('partials/navbar') %>
     <h2>Menu - <%=title%></h2>
-    <!-- <p>Select a dish</p> -->
+    <form action="/menu">
+        <button id="back-btn">
+            <span class="material-symbols-outlined">
+                arrow_back
+            </span>
+        </button>
+    </form>
     <div class="grid-container">
         <% for (dish of dishes) {%>
         <div class="form">
-            <!-- <button class="category-btn" onclick="openForm('<%=dish._id%>')" id="<%=dish._id%>"><strong><%=dish.name%></strong> <br>$<%=dish.price%> -->
             <button class="category-btn" id="<%=dish._id%>"><strong><%=dish.name%></strong> <br>$<%=dish.price%>
             </button>
-
         </div>
         <% } %>
     </div>
-    <% for(dish of dishes) {%>
+    <% for(let dish of dishes) {%>
     <div id="<%=dish._id%>popup" class="popup">
         <div class="popup-content">
-            <h2><%=dish.name%></h2>
+            <h3><%=dish.name%></h3>
         </div>
     </div>
     <%}%>
-    <script src="/js/category.js"></script>
+    <script src="/js/pickDish.js"></script>
     <%- include('partials/footer') %>

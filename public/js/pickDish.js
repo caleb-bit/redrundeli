@@ -1,8 +1,8 @@
 let formOpen = false;
 
-function isButton(x) {
-    for (let button of buttons) {
-        if (button == x) return true;
+function isPopup(x) {
+    for (let popup of popups) {
+        if (popup == x) return true;
     }
     return false;
 }
@@ -23,12 +23,10 @@ for (let button of buttons) {
 window.addEventListener(
     'click',
     function (event) {
-        console.log(event.target);
-        if (!isButton(event.target) && !isButton(event.target.parentElement)) {
+        if (isPopup(event.target)) {
             for (const popup of popups) {
                 popup.style.display = 'none';
             }
         }
-
     }
 )
