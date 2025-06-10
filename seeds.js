@@ -209,6 +209,7 @@ const allDescriptions = [
     ], [''], ['', '', '', '', '', '', '', ''], ['', ''], ['', '', '', ''], ['', '', '', '', '', '']
 ];
 
+
 const seedCategories = [];
 for (let i = 0; i < categories.length; i++) {
     const dishes = [];
